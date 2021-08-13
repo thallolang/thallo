@@ -11,9 +11,6 @@ As a pre-alpha release, there are no guarantees made; the alpha release will see
 
 Open an issue on (https://github.com/thallolang/thallo) if you see improvements that could be made that are not covered by the above. 
 
-
-### Prerequisites ###
-
 Overview
 ========
 
