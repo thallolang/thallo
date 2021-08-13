@@ -1,0 +1,17 @@
+EXECUTABLE = shape_and_shading
+OBJS = build/mLibSource.o build/main.o build/SimpleBuffer.o build/CeresImageSolver.o
+
+
+UNAME := $(shell uname)
+ifeq ($(UNAME), Darwin)
+  LFLAGS += -L../external/OpenMesh/lib/osx -Wl,-rpath,../external/OpenMesh/lib/osx
+endif
+
+ifeq ($(UNAME), Linux)
+  LFLAGS += -L../external/OpenMesh/lib/linux -Wl,-rpath,../external/OpenMesh/lib/linux
+endif
+
+LFLAGS += -lOpenMeshCore -lOpenMeshTools
+
+USES_CERES=1
+include ../shared/make_template.inc
